@@ -15,7 +15,7 @@ etindex:close()
 a = etcomp({blogName=blogName,posts={allposts}})
 print(a)
 
-v=io.open("index.html","w")
+v=io.open("index.html","wb")
 v:write(a)
 v:close()
 
