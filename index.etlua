@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title><%=pageTitle %></title>
+</head>
+<body>
+  <div id="header" class="header"><%=blogName %></div>
+  <% for i, post in pairs(posts) do %>
+    <div class="post">
+      <h4 class="post-title"><%=post.title %></h4>
+      <div class="post-content">
+        <%=post.content %>
+      </div>
+    </div>
+  <% end %>
+</body>
+</html>
