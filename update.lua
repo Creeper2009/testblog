@@ -8,9 +8,10 @@ allposts = posts.getAll()
 
 -- compile the etlua
 
-etindex = io.open("index.etlua","rb"):read("*all")
-print(etindex)
-etcomp  = etlua.compile(etindex)
+etindex = io.open("index.etlua","rb")
+print(etindex:read("*all"))
+etcomp  = etlua.compile(etindex:read("*all"))
+etindex:close()
 a = etcomp({blogName=blogName,posts={allposts}})
 print(a)
 
