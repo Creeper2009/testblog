@@ -15,6 +15,8 @@ etindex:close()
 a = etcomp({blogName=blogName,posts={allposts}})
 print(a)
 
-io.open("index.html","w"):write(a)
+v=io.open("index.html","w")
+v:write(a)
+v:close()
 
 os.execute(gitcmd)
